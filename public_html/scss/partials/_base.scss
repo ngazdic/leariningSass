@@ -1,0 +1,62 @@
+
+/*mi smo sa ovim ispod definisali varijablu koja ima neki difoltni color. da
+ako u radu dodje do pronmene boje, ne bi morali da idemo od jedne do jedne strane,
+od jednog do drugog propertija da im menjamo boje, ili da ne bi menjali varijablu black u neku
+drugu boju, mi onda napisemo ovu difoltnu varijablu i dodelimo joj boju balck*/
+$default-text-color:$black;
+$default-bg:$light-grey;
+$defalut-font:$rubik;
+$defalut-weight:$font-regular;
+
+$heading-weight:$font-bold;
+$heading-color:$purple;
+$headings-font:$josefin;
+
+
+
+
+img {
+    
+    max-width:100%;
+}
+
+*{box-sizing:border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  
+    
+}
+
+a{
+    
+    text-decoration:none;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: $headings-font;
+    font-weight:$heading-weight;
+    color:$heading-color;
+}
+
+html{
+    
+    font-size:10px; 
+}
+
+body{
+    
+    font-size:1.6rem;
+    color:$default-text-color;
+    background-color:$default-bg;
+    font-family:$defalut-font;
+    font-weight:$defalut-weight;
+}
+
+.container{
+    
+    margin:0 auto;
+    width:95%;
+    max-width: 1200px;
+}
