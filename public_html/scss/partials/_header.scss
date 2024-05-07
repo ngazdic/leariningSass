@@ -1,16 +1,120 @@
 
 $header-bg:$purple;
 $header-link-color:$white;
+$nav-font:$josefin;
+$nav-link-hover:$green;
+
 
 header{
-    
+
     padding:30px 0;
     background-color:$header-bg;
+
+    .branding{
+
+        text-align: center;
+        a{
+            color:$header-link-color;
+        }
+    }
+
+    nav{
+
+        ul{
+
+            list-style:none;
+            padding-left:0;
+            text-align: center;
+
+
+            li{
+                a{
+                    display:block;
+                    padding:5px 0;
+                    color:$header-link-color;
+                    font-family: $nav-font;
+                    text-transform:uppercase;
+                    font-weight:$font-bold;
+
+                    &:hover, &.active{
+                        color:$nav-link-hover;
+                    }
+                }
+                //a end 
+
+
+            }
+        }
+        //ul end
+    }
+    //nav end
+
+
+}
+//header end
+
+@media (min-width:768px){
+    
+    header{
+        .container{
+            
+            display:flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        nav{
+            
+            ul{
+                display:flex;
+                justify-content: space-between;
+                
+                li{
+                    
+                    a{
+                        
+                        padding:5px 5px;
+                    }
+                }
+            }//ul end
+            
+        }//nav end
+        
+        }//container end
+        
+        
+    }//end header
     
 }
 
-header a{
+
+
+
+@media (min-width:992px){
+    header{
+        .container{
+            
+       
+        nav{
+            
+            ul{
+              
+                
+                li{
+                    
+                    a{
+                        
+                        padding:5px 15px;
+                    }
+                }
+            }//ul end
+            
+        }//nav end
+        
+        }//container end
+        
+        
+    }//end header
     
-    color:$header-link-color;
+    
     
 }
