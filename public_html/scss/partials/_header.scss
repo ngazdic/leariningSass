@@ -37,7 +37,17 @@ header{
                     font-weight:$font-bold;
 
                     &:hover, &.active{
-                        color:$nav-link-hover;
+                        
+                        //ova funkcija pravi to da je boja kada hoverujemo u ovom slucaju,
+                        //za 180 stepeni suprotna od boje linka (u ovom slucaju komplementarna
+                        //boja od green je pruple)
+                        
+                       // color:complement($header-bg);
+                       
+                       //ovde ispod dodajemo lighten, da bi nam ova komplementarna boja ljubicastoj
+                       //(zelena), bila malo svetlija.
+                       
+                       color:lighten(complement($header-bg), 10%);
                     }
                 }
                 //a end 

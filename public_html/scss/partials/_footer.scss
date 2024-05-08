@@ -1,6 +1,6 @@
 $footer-bg: $purple;
 $footer-color:$white;
-$hover-a-color:$green;
+
 
 $footer-font:$josefin;
 
@@ -35,8 +35,8 @@ footer{
                         font-weight:$font-bold;
                         text-transform:uppercase;
                         
-                        &:hover{
-                            color:$hover-a-color;
+                        &:hover, &.active{
+                            color:lighten(complement($footer-bg), 10%);
                         }
                         
                     }
