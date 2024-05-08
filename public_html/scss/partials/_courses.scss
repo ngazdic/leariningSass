@@ -1,9 +1,147 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
-*/
-/*
-    Created on : May 7, 2024, 6:13:53 PM
-    Author     : nikolagazdic
-*/
 
+$thead-bg-color:$purple;
+$thead-color:$white;
+$course-section-bg-color:$light-grey;
+
+$border-table-white:2px solid white;
+$border-table-black:2px solid black;
+
+
+
+.course-section{
+
+    padding:50px 0;
+
+    table{
+        border:$border-table-black;
+        width:100%;
+        border-collapse: collapse;
+
+        caption{
+            text-align:left;
+            font-style: italic;
+
+        }
+
+
+
+
+        thead{
+
+            border:$border-table-white;
+
+            padding:30px 0;
+            background-color:$thead-bg-color;
+            color:$thead-color;
+
+
+            tr{
+
+                th{
+                    padding:30px 0;
+                    border:$border-table-white;
+
+                }
+            }
+
+
+
+
+        }
+        //thead ends
+
+        tbody{
+
+            border:$border-table-black;
+
+
+
+            tr{
+
+
+                &:nth-child(even){
+                    background-color:$white;
+                }
+                
+             
+                &:hover{
+                    background-color:darken($course-section-bg-color, 10%);
+                }
+
+                th{
+                    border:$border-table-black;
+                    padding:30px 0;
+                }
+
+                td{
+                    border:$border-table-black;
+                    padding-left:10px;
+                    line-height:25px;
+                }
+          
+
+            }
+
+        }
+        //tbody ends
+
+    }
+    //table ends
+
+
+
+
+}
+
+
+
+@media (min-width:768px){
+    
+    
+.course-section{
+
+    
+
+    table{
+   
+        thead{
+
+            padding:20px 0;
+           
+            tr{
+
+                th{
+                    padding:20px 0;
+                
+                }
+            }
+
+        }
+        //thead ends
+
+        tbody{
+
+            tr{
+
+                th{
+             
+                    padding:20px 0;
+                }
+
+                td{
+                   
+                    line-height:0px;
+                }
+          
+            }
+        }
+        //tbody ends
+
+    }
+    //table ends
+
+
+
+
+}
+}
