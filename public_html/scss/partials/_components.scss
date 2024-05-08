@@ -1,0 +1,72 @@
+
+//Ovaj partial je za neke globalne komponente kao sto je tabela, buttons itd
+
+$btn-default-background-color:$dark-grey;
+$btn-letter-color-white:$white;
+
+
+$btn-background-color-danger:$red;
+$btn-background-color-warning:$orange;
+$btn-background-color-info:$blue;
+$btn-background-color-sucess:$yellow;
+$btn-background-color-dark:$black;
+
+
+
+//ovaj % znak ispred btn klase, znaci da je btn nevidljiva klasa, tj da se nigde
+//u htmlu ne koristi ali je bitna, jer njene propertije koriste druge klase, koje
+//pomocu @extend nasledjuju te propretije. Dakle btn je nesto kao bazna klasa.
+//NAPOMENA- ovaj dolar znak je moguce koristiti samo sa klasama
+
+%btn{
+
+    display:inline-block;
+    padding:10px 25px;
+    border:none;
+    color:$btn-letter-color-white;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius:5px;
+    cursor:pointer;
+}
+
+
+
+.btn-default{
+    @extend %btn;
+    //sa ovim @extend .btn, .btn-default clasa nasledjuje sve
+    //sto je u  .btn clasi i ispod dodaje svoje propertije
+
+    background-color:$btn-default-background-color;
+
+}
+
+.btn-danger{
+    @extend %btn ;
+    background-color:$btn-background-color-danger;
+}
+
+
+.btn-warning{
+    @extend %btn ;
+    background-color:$btn-background-color-warning;
+
+}
+
+.btn-sucess{
+    @extend %btn ;
+    background-color:$btn-background-color-sucess;
+}
+
+
+.btn-info{
+    @extend %btn ;
+    background-color:$btn-background-color-info;
+
+}
+
+.btn-dark{
+    @extend %btn ;
+    background-color:$btn-background-color-dark;
+}
