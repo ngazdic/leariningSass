@@ -1,7 +1,18 @@
 $comment-bg:$white;
 
 .comment-section{
-    
-    padding:30px 0;
+    @include padding(30px, 0, 30px, 0);
+
     background-color:$comment-bg;
-}
+    
+    
+    .comment-img{
+        
+        img{
+            
+            @include radius(50%);
+        }
+    }//coment-img ends
+}//comment-section ends
+
+

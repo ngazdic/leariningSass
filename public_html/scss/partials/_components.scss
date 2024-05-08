@@ -24,10 +24,8 @@ $btn-background-color-dark:$black;
     padding:10px 25px;
     border:none;
     color:$btn-letter-color-white;
-    border-radius:5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -o-border-radius:5px;
+   //@include radius(5px);
+       @include customRadius(5px, 50%, 5px, 50%);
     cursor:pointer;
      
 }
@@ -35,12 +33,14 @@ $btn-background-color-dark:$black;
 
 
 .btn-default{
+    
+     
     @extend %btn;
     //sa ovim iznad- @extend .btn - .btn-default clasa nasledjuje sve
     //sto je u  .btn clasi i ispod dodaje svoje propertije
 
     
-    
+
     //sa ovim ispod -rgba()- mi u toj funkciji dodajemo dva parametra
     //jedan je boja a drugi je opacity te boje.
     background-color:rgba($btn-default-background-color, 0.2);

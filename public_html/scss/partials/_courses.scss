@@ -9,8 +9,8 @@ $border-table-black:2px solid black;
 
 
 .course-section{
+    @include padding(50px, 0, 50px, 0);
 
-    padding:50px 0;
 
     table{
         border:$border-table-black;
@@ -22,9 +22,6 @@ $border-table-black:2px solid black;
             font-style: italic;
 
         }
-
-
-
 
         thead{
 
@@ -44,9 +41,6 @@ $border-table-black:2px solid black;
                 }
             }
 
-
-
-
         }
         //thead ends
 
@@ -54,16 +48,14 @@ $border-table-black:2px solid black;
 
             border:$border-table-black;
 
-
-
             tr{
 
 
                 &:nth-child(even){
                     background-color:$white;
                 }
-                
-             
+
+
                 &:hover{
                     background-color:darken($course-section-bg-color, 10%);
                 }
@@ -78,7 +70,7 @@ $border-table-black:2px solid black;
                     padding-left:10px;
                     line-height:25px;
                 }
-          
+
 
             }
 
@@ -88,60 +80,55 @@ $border-table-black:2px solid black;
     }
     //table ends
 
-
-
-
 }
-
-
 
 @media (min-width:768px){
-    
-    
-.course-section{
 
-    
 
-    table{
-   
-        thead{
+    .course-section{
 
-            padding:20px 0;
-           
-            tr{
 
-                th{
-                    padding:20px 0;
-                
+
+        table{
+
+            thead{
+
+                padding:20px 0;
+
+                tr{
+
+                    th{
+                        padding:20px 0;
+
+                    }
+                }
+
+            }
+            //thead ends
+
+            tbody{
+
+                tr{
+
+                    th{
+
+                        padding:20px 0;
+                    }
+
+                    td{
+
+                        line-height:0px;
+                    }
+
                 }
             }
+            //tbody ends
 
         }
-        //thead ends
+        //table ends
 
-        tbody{
 
-            tr{
 
-                th{
-             
-                    padding:20px 0;
-                }
-
-                td{
-                   
-                    line-height:0px;
-                }
-          
-            }
-        }
-        //tbody ends
 
     }
-    //table ends
-
-
-
-
-}
 }

@@ -1,0 +1,46 @@
+
+
+
+//MIXIN:
+//Sa ovim mi u sustini cuvamo neke proste funkcije, tj cuvamo neke delove 
+//koda koji nam se ponavaljaju , u okviru funkcije mix in. Na primer ispod,
+//posto border radius koristimo za dosta stvari, kao i vendor prefikse koji idu
+//sa njim, mi cemo napraviti funkciju radius i uraditi sledece:
+
+
+@mixin radius($radius){
+    border-radius:$radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -o-border-radius:$radius;
+    
+    
+}
+
+
+//mi smo iznad napravili funkciju radius i njoj kao argument dodali radius, da bi 
+//mogli da menjamo border-radius od slucaja do slucaja kada nam gde zatreba i koliki.
+
+
+
+//ovo ispod je neka custom varijanta gde mi ubacujemo vise parametara da bi 
+//oblikovali ovaj border radius
+@mixin customRadius($upperLeft, $upperRight, $bottomLeft, $bottomRight){
+    
+    border-radius:$upperLeft $upperRight $bottomLeft $bottomRight;
+    -moz-border-radius: $upperLeft $upperRight $bottomLeft $bottomRight;
+    -webkit-border-radius: $upperLeft $upperRight $bottomLeft $bottomRight;
+    -o-border-radius:$upperLeft $upperRight $bottomLeft $bottomRight;
+    
+    
+}
+
+@mixin padding($pt, $pr, $pb, $pl){
+    
+    padding:$pt $pr $pb $pl;
+}
+
+@mixin backgroundColor($bg){
+    
+    background-color:$bg;
+}

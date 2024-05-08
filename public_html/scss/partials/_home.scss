@@ -1,9 +1,7 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
-*/
-/*
-    Created on : May 7, 2024, 6:12:53 PM
-    Author     : nikolagazdic
-*/
+$home-bg: $white;
 
+.home-section{
+    
+    @include padding(150px, 105px, 150px, 150px );
+    @include backgroundColor($home-bg);
+}

@@ -7,9 +7,9 @@ $nav-link-hover:$green;
 
 header{
 
-    padding:30px 0;
-    background-color:$header-bg;
+    @include padding(30px, 0, 30px, 0);
 
+    @include backgroundColor($header-bg);
     .branding{
 
         text-align: center;
@@ -23,7 +23,8 @@ header{
         ul{
 
             list-style:none;
-            padding-left:0;
+            @include padding(0, 0, 0, 0);
+
             text-align: center;
 
 
@@ -37,17 +38,17 @@ header{
                     font-weight:$font-bold;
 
                     &:hover, &.active{
-                        
+
                         //ova funkcija pravi to da je boja kada hoverujemo u ovom slucaju,
                         //za 180 stepeni suprotna od boje linka (u ovom slucaju komplementarna
                         //boja od green je pruple)
-                        
-                       // color:complement($header-bg);
-                       
-                       //ovde ispod dodajemo lighten, da bi nam ova komplementarna boja ljubicastoj
-                       //(zelena), bila malo svetlija.
-                       
-                       color:lighten(complement($header-bg), 10%);
+
+                        // color:complement($header-bg);
+
+                        //ovde ispod dodajemo lighten, da bi nam ova komplementarna boja ljubicastoj
+                        //(zelena), bila malo svetlija.
+
+                        color:lighten(complement($header-bg), 10%);
                     }
                 }
                 //a end 
@@ -64,36 +65,40 @@ header{
 //header end
 
 @media (min-width:768px){
-    
+
     header{
         .container{
-            
+
             display:flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        nav{
-            
-            ul{
-                display:flex;
-                justify-content: space-between;
-                
-                li{
-                    
-                    a{
-                        
-                        padding:5px 5px;
+            justify-content: space-between;
+            align-items: center;
+
+            nav{
+
+                ul{
+                    display:flex;
+                    justify-content: space-between;
+
+                    li{
+
+                        a{
+
+                            padding:5px 5px;
+                        }
                     }
                 }
-            }//ul end
-            
-        }//nav end
-        
-        }//container end
-        
-        
-    }//end header
-    
+                //ul end
+
+            }
+            //nav end
+
+        }
+        //container end
+
+
+    }
+    //end header
+
 }
 
 
@@ -102,29 +107,33 @@ header{
 @media (min-width:992px){
     header{
         .container{
-            
-       
-        nav{
-            
-            ul{
-              
-                
-                li{
-                    
-                    a{
-                        
-                        padding:5px 15px;
+
+
+            nav{
+
+                ul{
+
+
+                    li{
+
+                        a{
+
+                            padding:5px 15px;
+                        }
                     }
                 }
-            }//ul end
-            
-        }//nav end
-        
-        }//container end
-        
-        
-    }//end header
-    
-    
-    
+                //ul end
+
+            }
+            //nav end
+
+        }
+        //container end
+
+
+    }
+    //end header
+
+
+
 }
