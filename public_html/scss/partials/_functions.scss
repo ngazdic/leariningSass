@@ -1,7 +1,10 @@
 
 
 
-//MIXIN:
+////////MIXIN://///////
+
+
+
 //Sa ovim mi u sustini cuvamo neke proste funkcije, tj cuvamo neke delove 
 //koda koji nam se ponavaljaju , u okviru funkcije mix in. Na primer ispod,
 //posto border radius koristimo za dosta stvari, kao i vendor prefikse koji idu
@@ -9,12 +12,30 @@
 
 
 @mixin radius($radius){
-    border-radius:$radius;
-    -moz-border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -o-border-radius:$radius;
-    
-    
+
+    ////////IF ELSE//////////
+    //dole sam na dnu definisao varijablu enable-radius i dodelio joj boolean true;
+    //dakle ja ovde ispod ispirujem ako je enable radius true onda ce sve clase koje
+    //imaju @iunclude radius($radius); da dobiju naznaceni radius, u zavisnosti koliku vrednost upisem
+    //ako je false onda nece imati border radius, tj border radius ce biti 0. AKO ZELIMO DA ISKLJUCIMO
+    //BORER-RADIUS ONDA VARIJABLI ENABLE_RADIUS DODELIMO VREDNOST FALSE;
+    @if($enable-radius){
+
+        border-radius:$radius;
+        -moz-border-radius: $radius;
+        -webkit-border-radius: $radius;
+        -o-border-radius:$radius;
+    }
+
+    @else{
+
+        border-radius:0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -o-border-radius:0;
+    }
+
+
 }
 
 
@@ -26,21 +47,37 @@
 //ovo ispod je neka custom varijanta gde mi ubacujemo vise parametara da bi 
 //oblikovali ovaj border radius
 @mixin customRadius($upperLeft, $upperRight, $bottomLeft, $bottomRight){
-    
-    border-radius:$upperLeft $upperRight $bottomLeft $bottomRight;
-    -moz-border-radius: $upperLeft $upperRight $bottomLeft $bottomRight;
-    -webkit-border-radius: $upperLeft $upperRight $bottomLeft $bottomRight;
-    -o-border-radius:$upperLeft $upperRight $bottomLeft $bottomRight;
-    
-    
+    @if($enable-radius){
+        border-radius:$upperLeft $upperRight $bottomLeft $bottomRight;
+        -moz-border-radius: $upperLeft $upperRight $bottomLeft $bottomRight;
+        -webkit-border-radius: $upperLeft $upperRight $bottomLeft $bottomRight;
+        -o-border-radius:$upperLeft $upperRight $bottomLeft $bottomRight;
+    }
+    @else{
+
+
+        border-radius:0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        -o-border-radius:0;
+    }
+
 }
 
 @mixin padding($pt, $pr, $pb, $pl){
-    
+
     padding:$pt $pr $pb $pl;
 }
 
 @mixin backgroundColor($bg){
-    
+
     background-color:$bg;
 }
+
+
+
+////////IF ELSE//////////
+
+
+$enable-radius: true;
+
