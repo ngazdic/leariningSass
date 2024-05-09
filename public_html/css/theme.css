@@ -3,7 +3,6 @@
   display: inline-block;
   padding: 10px 25px;
   border: none;
-  color: #ffffff;
   border-radius: 5px 50% 5px 50%;
   -moz-border-radius: 5px 50% 5px 50%;
   -webkit-border-radius: 5px 50% 5px 50%;
@@ -13,6 +12,7 @@
 
 .btn-default {
   background-color: rgba(68, 68, 68, 0.2);
+  color: #ffffff;
 }
 .btn-default:hover {
   background-color: #111111;
@@ -20,6 +20,7 @@
 
 .btn-danger {
   background-color: #f00008;
+  color: #ffffff;
 }
 .btn-danger:hover {
   background-color: #bd0006;
@@ -27,6 +28,7 @@
 
 .btn-warning {
   background-color: #f77a05;
+  color: #000000;
 }
 .btn-warning:hover {
   background-color: #c56104;
@@ -34,12 +36,14 @@
 
 .btn-sucess {
   background-color: #e0cb09;
+  color: #000000;
 }
 .btn-sucess:hover {
   background-color: #af9f07;
 }
 
 .btn-info {
+  color: #ffffff;
   background-color: #0e15cc;
 }
 .btn-info:hover {
@@ -47,6 +51,7 @@
 }
 
 .btn-dark {
+  color: #ffffff;
   background-color: #000000;
 }
 .btn-dark:hover {

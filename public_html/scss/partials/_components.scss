@@ -23,7 +23,7 @@ $btn-background-color-dark:$black;
     display:inline-block;
     padding:10px 25px;
     border:none;
-    color:$btn-letter-color-white;
+ 
    //@include radius(5px);
        @include customRadius(5px, 50%, 5px, 50%);
     cursor:pointer;
@@ -44,8 +44,11 @@ $btn-background-color-dark:$black;
     //sa ovim ispod -rgba()- mi u toj funkciji dodajemo dva parametra
     //jedan je boja a drugi je opacity te boje.
     background-color:rgba($btn-default-background-color, 0.2);
+    
+     color:colorYIQ($black);
+    
    &:hover{
-       
+         
        
        //darken i lighten funkcije uzimaju dva parametra, boju i procenat 
        //za koji zelimo da ta boja bude svetlija ili tamnija. U glavnom 
@@ -60,6 +63,7 @@ $btn-background-color-dark:$black;
 .btn-danger{
     @extend %btn ;
     background-color:$btn-background-color-danger;
+        color:colorYIQ($btn-background-color-danger);
    &:hover{
         background-color:darken($btn-background-color-danger, 10%);
     }
@@ -68,6 +72,7 @@ $btn-background-color-dark:$black;
 .btn-warning{
     @extend %btn ;
     background-color:$btn-background-color-warning;
+    color:colorYIQ($btn-background-color-warning);
   &:hover{
         background-color:darken($btn-background-color-warning, 10%);
     }
@@ -75,7 +80,9 @@ $btn-background-color-dark:$black;
 
 .btn-sucess{
     @extend %btn ;
-    background-color:$btn-background-color-sucess;  &:hover{
+    background-color:$btn-background-color-sucess; 
+        color:colorYIQ($btn-background-color-sucess);
+    &:hover{
         background-color:darken($btn-background-color-sucess, 10%);
     }
 }
@@ -83,6 +90,8 @@ $btn-background-color-dark:$black;
 
 .btn-info{
     @extend %btn ;
+    
+       color:colorYIQ($btn-background-color-info);
     background-color:$btn-background-color-info;  &:hover{
         background-color:darken($btn-background-color-info, 10%);
     }
@@ -91,6 +100,7 @@ $btn-background-color-dark:$black;
 
 .btn-dark{
     @extend %btn ;
+     color:colorYIQ($btn-background-color-dark);
     background-color:$btn-background-color-dark;  &:hover{
         background-color:lighten($btn-background-color-dark, 30%);
     }

@@ -19,6 +19,8 @@
     //imaju @iunclude radius($radius); da dobiju naznaceni radius, u zavisnosti koliku vrednost upisem
     //ako je false onda nece imati border radius, tj border radius ce biti 0. AKO ZELIMO DA ISKLJUCIMO
     //BORER-RADIUS ONDA VARIJABLI ENABLE_RADIUS DODELIMO VREDNOST FALSE;
+    
+    
     @if($enable-radius){
 
         border-radius:$radius;
@@ -80,4 +82,36 @@
 
 
 $enable-radius: true;
+
+
+
+///////FUNCTIONS///////
+
+//Kreiracemo jednu funkciju koja ce da prima jedan parametar a to je color i ta 
+//funkcija treba da nam ispita kakva je to boja da li je svetla ili tamna i u zavisnosti
+//od toga da nam ispise boju slova u zavisnosti od pozadine sekcije. Da mi ne moramo svaki put
+//da ispitujemo koja boja nam treba
+
+//YIQ- to su kontrasti potpuni od onih boja koje koristimo za 180 stepni
+
+
+
+@function colorYIQ($color){
+    $r : red($red);
+    $g : green($color);
+    $b : blue($blue);
+    
+    
+    $yiq : $r * 0.299 + $g * 0.587 + $b * 0.114; //ovo je formula za dobijanje tog yiq-a. dakle ako odemo
+                                                  //online i guglamo videcemo da se mnozenjem ovih brojeva
+                                                  //dobija poptupni polar oposite od ovih osnovnih boja
+                                                  
+       @if($yiq > 129){ //ako je yiq veci od 129 onda je boja svetla i trebaju nam crna slova i obrnuto;
+                                                      
+           @return $black;                                           
+       }   @else{
+           
+           @return $white;
+       }                                          
+}
 
