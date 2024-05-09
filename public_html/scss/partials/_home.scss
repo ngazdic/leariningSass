@@ -4,4 +4,20 @@ $home-bg: $white;
     
     @include padding(150px, 105px, 150px, 150px );
     @include backgroundColor($home-bg);
+    
+    
+    //kada definisemo putanje definisiemo kroz theme.css file jer
+    //taj fajl ucitavamo na nasu stranu. 
+    //Pogresno:
+    
+   // background-image:url(../../img/home.png);
+   
+    //Dobro:
+    
+    background-image:url(assets/home.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:top-center;
+    
+    
 }
