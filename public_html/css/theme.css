@@ -1,5 +1,64 @@
+/*
+$btn-default-background-color:$dark-grey;
+$btn-letter-color-white:$white;
+
+
+$btn-background-color-danger:$red;
+$btn-background-color-warning:$orange;
+$btn-background-color-info:$blue;
+$btn-background-color-sucess:$yellow;
+$btn-background-color-dark:$black;
+*/
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-.btn-dark, .btn-info, .btn-sucess, .btn-warning, .btn-danger, .btn-default {
+.btn-default {
+  background-color: #ffffff;
+  color: #000000;
+}
+.btn-default:hover {
+  background-color: #b3b3b3;
+}
+
+.btn-danger {
+  background-color: #f00008;
+  color: #ffffff;
+}
+.btn-danger:hover {
+  background-color: #570003;
+}
+
+.btn-sucess {
+  background-color: #e0cb09;
+  color: #000000;
+}
+.btn-sucess:hover {
+  background-color: #4d4603;
+}
+
+.btn-warning {
+  background-color: #f77a05;
+  color: #000000;
+}
+.btn-warning:hover {
+  background-color: #613002;
+}
+
+.btn-info {
+  background-color: #0e15cc;
+  color: #ffffff;
+}
+.btn-info:hover {
+  background-color: #04063d;
+}
+
+.btn-dark {
+  background-color: gray;
+  color: #000000;
+}
+.btn-dark:hover {
+  background-color: #333333;
+}
+
+.btn-default, .btn-danger, .btn-sucess, .btn-warning, .btn-info, .btn-dark {
   display: inline-block;
   padding: 10px 25px;
   border: none;
@@ -10,54 +69,82 @@
   cursor: pointer;
 }
 
-.btn-default {
-  background-color: rgba(68, 68, 68, 0.2);
-  color: #ffffff;
-}
-.btn-default:hover {
-  background-color: #111111;
+/*
+
+.btn-default{
+
+
+    @extend %btn;
+    //sa ovim iznad- @extend .btn - .btn-default clasa nasledjuje sve
+    //sto je u  .btn clasi i ispod dodaje svoje propertije
+
+
+
+    //sa ovim ispod -rgba()- mi u toj funkciji dodajemo dva parametra
+    //jedan je boja a drugi je opacity te boje.
+    background-color:rgba($btn-default-background-color, 0.2);
+
+     color:colorYIQ($black);
+
+   &:hover{
+
+
+       //darken i lighten funkcije uzimaju dva parametra, boju i procenat 
+       //za koji zelimo da ta boja bude svetlija ili tamnija. U glavnom 
+       //se koristi kod hover stanja.
+
+
+        background-color:darken($btn-default-background-color, 20%);
+    }
+
 }
 
-.btn-danger {
-  background-color: #f00008;
-  color: #ffffff;
-}
-.btn-danger:hover {
-  background-color: #bd0006;
-}
-
-.btn-warning {
-  background-color: #f77a05;
-  color: #000000;
-}
-.btn-warning:hover {
-  background-color: #c56104;
+.btn-danger{
+    @extend %btn ;
+    background-color:$btn-background-color-danger;
+        color:colorYIQ($btn-background-color-danger);
+   &:hover{
+        background-color:darken($btn-background-color-danger, 10%);
+    }
 }
 
-.btn-sucess {
-  background-color: #e0cb09;
-  color: #000000;
-}
-.btn-sucess:hover {
-  background-color: #af9f07;
-}
-
-.btn-info {
-  color: #ffffff;
-  background-color: #0e15cc;
-}
-.btn-info:hover {
-  background-color: #0b109c;
+.btn-warning{
+    @extend %btn ;
+    background-color:$btn-background-color-warning;
+    color:colorYIQ($btn-background-color-warning);
+  &:hover{
+        background-color:darken($btn-background-color-warning, 10%);
+    }
 }
 
-.btn-dark {
-  color: #ffffff;
-  background-color: #000000;
-}
-.btn-dark:hover {
-  background-color: #4d4d4d;
+.btn-sucess{
+    @extend %btn ;
+    background-color:$btn-background-color-sucess; 
+        color:colorYIQ($btn-background-color-sucess);
+    &:hover{
+        background-color:darken($btn-background-color-sucess, 10%);
+    }
 }
 
+
+.btn-info{
+    @extend %btn ;
+
+       color:colorYIQ($btn-background-color-info);
+    background-color:$btn-background-color-info;  &:hover{
+        background-color:darken($btn-background-color-info, 10%);
+    }
+
+}
+
+.btn-dark{
+    @extend %btn ;
+     color:colorYIQ($btn-background-color-dark);
+    background-color:$btn-background-color-dark;  &:hover{
+        background-color:lighten($btn-background-color-dark, 30%);
+    }
+}
+*/
 /*FONT PROPERTY*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

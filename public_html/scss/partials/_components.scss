@@ -1,6 +1,6 @@
 
 //Ovaj partial je za neke globalne komponente kao sto je tabela, buttons itd
-
+/*
 $btn-default-background-color:$dark-grey;
 $btn-letter-color-white:$white;
 
@@ -10,6 +10,39 @@ $btn-background-color-warning:$orange;
 $btn-background-color-info:$blue;
 $btn-background-color-sucess:$yellow;
 $btn-background-color-dark:$black;
+*/
+
+
+
+
+//////EACH PETLJA/////////
+
+//1 - IPSOD RADIMO MAPIRANJE GDE POD KLJUCEM CUVAMO ODREDJENE VREDNOSTI
+$btn-collection:( //asocijativni niz gde pod odredjenim kljucem cuvamo vrednost
+
+'default': $white,
+'danger': $red,
+'sucess':$yellow,
+'warning':$orange,
+'info':$blue,
+'dark':lighten($black, 50%)
+
+);
+
+//2 PREKO EACH PETLJE PROLAZIMO KROZ SVAKI OD OVIH ELEMENATA I TKAO UBRAZAVMO PISANJE
+
+@each $key, $value in $btn-collection{//za svaki key i value u $btn-collectionu
+    
+    .btn-#{$key}{//ovde mi pravimo da nam je key ime klase koje dolazi posle crtice
+        
+        @extend %btn ;
+    background-color:$value;
+        color:colorYIQ($value);
+   &:hover{
+        background-color:darken($value, 30%);
+    }
+    }
+}
 
 
 
@@ -30,7 +63,7 @@ $btn-background-color-dark:$black;
      
 }
 
-
+/*
 
 .btn-default{
     
@@ -105,3 +138,4 @@ $btn-background-color-dark:$black;
         background-color:lighten($btn-background-color-dark, 30%);
     }
 }
+*/
