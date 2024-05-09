@@ -546,7 +546,7 @@ header nav ul li a:hover, header nav ul li a.active {
   }
 }
 .home-section {
-  padding: 150px 105px 150px 150px;
+  padding: 150px 50px 150px 50px;
   background-color: #ffffff;
   background-image: url(assets/home.png);
   background-size: cover;
@@ -618,20 +618,85 @@ header nav ul li a:hover, header nav ul li a.active {
   padding: 30px 0 30px 0;
   background-color: #ffffff;
 }
-.comment-section .comment-img img {
+.comment-section .comment-list {
+  padding-left: 0;
+}
+.comment-section .comment-list .comment-item {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.comment-section .comment-list .comment-body {
+  padding-left: 10px;
+}
+.comment-section .comment-list .comment-body h2 {
+  margin-top: 0;
+}
+.comment-section .comment-list .comment-img img {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   -o-border-radius: 50%;
+  display: block;
+  width: 250px;
 }
 
+@media (min-width: 768px) {
+  .comment-img img {
+    width: auto !important;
+    height: auto !important;
+  }
+}
 .service-section {
   padding: 30px 0 30px 0;
 }
 
 .contact-section {
   background-color: #ffffff;
-  padding: 150px 150px 150px 150px;
+  padding: 100px 50px 100px 50px;
+  background-image: url(assets/contact.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top-center;
+  background-attachment: fixed;
+}
+.contact-section .container {
+  text-align: left;
+}
+.contact-section h2 {
+  text-align: center;
+}
+.contact-section .contact-form .form-group textarea, .contact-section .contact-form .form-group input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 2px solid grey;
+}
+.contact-section .contact-form {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-section .contact-form .form-group input {
+  line-height: 3rem;
+}
+.contact-section .contact-form .form-group label {
+  display: block;
+  padding-bottom: 2px;
+}
+.contact-section .contact-form .form-group button {
+  border-radius: 5px 20% 5px 20%;
+  -moz-border-radius: 5px 20% 5px 20%;
+  -webkit-border-radius: 5px 20% 5px 20%;
+  -o-border-radius: 5px 20% 5px 20%;
 }
 
 footer {

@@ -2,7 +2,75 @@
 $contact-bg:$white;
 
 .contact-section{
+    .container{
+        
+        text-align:left;
+        
+        
+    }
+    
+    h2{
+          text-align:center;
+        
+    }
+     
+   
     
     @include backgroundColor($contact-bg);
-    @include padding(150px,150px,150px,150px);
-}
+    @include padding(100px,50px,100px,50px);
+    
+    background-image:url(assets/contact.png);
+      background-size:cover;
+    background-repeat:no-repeat;
+    background-position:top-center;
+    background-attachment:fixed;
+    
+    
+    %input-and-textarea-general-style{
+      
+                 display:block;
+               width:100%;
+               margin-bottom:10px;
+               @include radius(5px);
+                    border:2px solid grey;
+    }
+    
+    .contact-form{
+      
+        width:100%;
+        max-width:500px;
+        margin-left:auto;
+          margin-right:auto;
+        
+        .form-group{
+            
+             
+             
+            input{
+                   @extend %input-and-textarea-general-style;
+             line-height:3rem;
+          
+        }
+     
+        label{
+            
+           display:block;
+           padding-bottom:2px;
+        }
+        
+        textarea{
+             @extend %input-and-textarea-general-style;
+        }
+        
+      
+        
+        button{
+            
+               @include customRadius(5px, 20%, 5px, 20%);
+        }
+        
+        
+    }
+    
+   
+}}

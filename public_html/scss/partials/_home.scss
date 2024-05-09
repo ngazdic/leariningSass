@@ -2,7 +2,7 @@ $home-bg: $white;
 
 .home-section{
     
-    @include padding(150px, 105px, 150px, 150px );
+    @include padding(150px,50px,150px,50px);
     @include backgroundColor($home-bg);
     
     
@@ -21,3 +21,6 @@ $home-bg: $white;
     
     
 }
+
+
+

@@ -76,6 +76,20 @@
     background-color:$bg;
 }
 
+@mixin displayFlex(){
+
+   display: -moz-flex;
+display: -webkit-flex;
+display: -ms-flexbox; 
+display: flex;
+}
+
+
+
+
+
+
+
 
 
 ////////IF ELSE//////////
